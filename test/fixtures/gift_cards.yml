@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  sender: MyString
-  receiver: MyString
-  description: MyString
-  money: 9.99
+vandan:
+  sender: vandan
+  receiver: krupa
+  description: Best friend GiftCard
+  money: 10.00
 
-two:
-  sender: MyString
-  receiver: MyString
-  description: MyString
-  money: 9.99
+preeti:
+  sender: preeti
+  receiver: vandan
+  description: Boyfriend GiftCard
+  money: 11.00
