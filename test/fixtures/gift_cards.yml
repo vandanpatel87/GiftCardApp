@@ -5,9 +5,11 @@ vandan:
   receiver: krupa
   description: Best friend GiftCard
   money: 10.00
+  user_id: 1
 
 preeti:
   sender: preeti
   receiver: vandan
   description: Boyfriend GiftCard
   money: 11.00
+  user_id: 1

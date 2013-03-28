@@ -19,8 +19,10 @@
     <td><%= gift_card.description %></td>
     <td><%= gift_card.money %></td>
     <td><%= link_to 'Show', gift_card %></td>
-    <td><%= link_to 'Edit', edit_gift_card_path(gift_card) %></td>
-    <td><%= link_to 'Destroy', gift_card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% if user_signed_in? && current_user == gift_card.user %>
+      <td><%= link_to 'Edit', edit_gift_card_path(gift_card) %></td>
+      <td><%= link_to 'Destroy', gift_card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>

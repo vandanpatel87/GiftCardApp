@@ -89,5 +89,6 @@ class GiftCardsController < ApplicationController
   def owns_giftcard
     if !user_signed_in? || current_user != GiftCard.find(params[:id]).user
       redirect_to gift_cards_path, error: "You cannot do that!"
+    end
   end
 end
