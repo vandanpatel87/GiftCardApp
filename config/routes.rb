@@ -1,4 +1,6 @@
 GiftCardApp::Application.routes.draw do
+  devise_for :users
+
   resources :gift_cards
 
 
