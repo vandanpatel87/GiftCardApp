@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130328203249) do
+ActiveRecord::Schema.define(:version => 20130328204949) do
 
   create_table "gift_cards", :force => true do |t|
     t.string   "sender"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20130328203249) do
     t.decimal  "money"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "user_id"
   end
 
   create_table "users", :force => true do |t|

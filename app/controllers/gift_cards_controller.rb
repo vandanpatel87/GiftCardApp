@@ -1,4 +1,7 @@
 class GiftCardsController < ApplicationController
+
+  before_filter :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_filter :owns_giftcard, only: [:edit, :update, :destroy]
   # GET /gift_cards
   # GET /gift_cards.json
   def index
@@ -79,5 +82,12 @@ class GiftCardsController < ApplicationController
       format.html { redirect_to gift_cards_url }
       format.json { head :no_content }
     end
+  end
+
+  private
+
+  def owns_giftcard
+    if !user_signed_in? || current_user != GiftCard.find(params[:id]).user
+      redirect_to gift_cards_path, error: "You cannot do that!"
   end
 end
